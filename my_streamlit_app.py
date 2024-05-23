@@ -12,7 +12,7 @@ df_car = pd.read_csv(link)
 df_car
 
 
-viz_correlation = sns.heatmap(df_car.loc[:,df_weather.columns != "continent"].corr(), center=0, annot = True)
+viz_correlation = sns.heatmap(df_car.loc[:,df_car.columns != "continent"].corr(), center=0, annot = True)
 
 st.pyplot(viz_correlation.figure)
 
