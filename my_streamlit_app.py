@@ -21,7 +21,7 @@ st.write("there is also a strong negative correlation beetween mpd and weightlbs
 
 choix_continent = st.multiselect(
 		"Please select your continent",
-		["US.", "Japan.", "Europe."]
+		["US", "Japan", "Europe"]
 		)
 
 st.write("You selected :", choix_continent)
