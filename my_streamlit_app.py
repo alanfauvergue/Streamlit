@@ -27,3 +27,5 @@ choix_continent = st.multiselect(
 st.write("You selected :", choix_continent)
 
 st.scatter_chart(data = df_car, x = df_car['cubicinches'][df_car['continent'].str.contains(choix_continent)], y = df_car['cylinders'][df_car['continent'].str.contains(choix_continent)])
+
+st.write("ça ne fonctionne pas mais il est 23h30 à l'heure où je saisis ce code, j'en ai marre, bonne nuit ! :D")
