@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import seaborn as sns
-import matplotlib.pyplot
+import matplotlib.pyplot as plt
 
 st.title('Hello corrector, welcome to my application wich deals with car analysis !')
 
@@ -26,4 +26,4 @@ choix_continent = st.multiselect(
 
 st.write("You selected :", choix_continent)
 
-st.scatter_chart(data = df_car['continent'] == choix_continent, x = df_car['cubicinches'], y = df_car['cylinders'])
+st.scatter_chart(data = df_car, x = df_car['cubicinches'][df_car['continent'].str.contains(choix_continent)], y = df_car['cylinders'][df_car['continent'].str.contains(choix_continent)])
