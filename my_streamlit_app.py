@@ -28,5 +28,5 @@ df_filtered = df_car[df_car['continent'] == choix_continent]
 
 st.write("You selected :", choix_continent)
 
-st.scatter_chart(data = df_car, x = df_filtered['cubicinches'], y = df_filtered['cylinders'])
+st.scatter_chart(data = df_filtered, x = 'cubicinches', y = 'cylinders')
 
