@@ -21,7 +21,7 @@ st.write("there is also a strong negative correlation beetween mpd and weightlbs
 
 choix_continent = st.selectbox(
 		"Please select your continent :",
-		df["continent"].unique()
+		df_car["continent"].unique()
 		)
 
 df_filtered = df_car[df_car['continent'] == choix_continent]
