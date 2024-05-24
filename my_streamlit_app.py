@@ -19,13 +19,14 @@ st.pyplot(viz_correlation.figure)
 st.write("we can see a strong positive correlation beetween cylinders and weightlbs, hp, cubicinches.")
 st.write("there is also a strong negative correlation beetween mpd and weightlbs, cubicinches, cylinders, hp.")
 
-choix_continent = st.multiselect(
-		"Please select your continent",
-		["US.", "Japan.", "Europe."]
+choix_continent = st.selectbox(
+		"Please select your continent :",
+		df["continent"].unique()
 		)
+
+df_filtered = df_car[df_car['continent'] == choix_continent]
 
 st.write("You selected :", choix_continent)
 
-st.scatter_chart(data = df_car, x = df_car['cubicinches'][df_car['continent']=="Japan."], y = df_car['cylinders'][df_car['continent']=="Japan."])
+st.scatter_chart(data = df_car, x = df_filtered['cubicinches'], y = df_filtered['cylinders'])
 
-st.write("ça ne fonctionne pas mais il est 23h30 à l'heure où je saisis ce code, j'en ai marre, bonne nuit ! :D")
